@@ -1,0 +1,12 @@
+<div class="row">
+  <% @items.each do |item| %>
+    <div class="card">
+      <!-- <img src="http://english.tw/wp-content/themes/qaengine/img/default-thumbnail.jpg" height="280" alt="Card image cap"> -->
+      <%= image_tag item.image_url, height: "280" %>
+      <p class="card-text"><%= item.message %>
+         <span class="badge badge-success">#cgv</span>
+      </p>
+     
+    </div>
+  <% end %>
+</div>
