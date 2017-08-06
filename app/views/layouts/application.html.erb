@@ -9,9 +9,12 @@
   </head>
 
   <body>
-  	<%= render "shared/nav_bar" %>
-  	<div class="container">
-    	<%= yield %>
+    <div class="main-content" id="main-content">
+      <%= render "shared/nav_bar" %>
+      <%= yield :feature_banner %>
+      <div class="container">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,27 @@
+<% content_for :feature_banner do %>
+  <%= render "shared/feature_banners" %>  
+<% end %>
+<div class="page-header">
+  <h4>Sale for you</h4>
+</div>
+<div class="sale-items">
+  <div class="row">
+    <% @items.each do |item| %>
+    <div class="col-md-4">
+      <div class="card">
+        <!--<img class="card-img-top" height="200" src="http://cdn01.androidauthority.net/wp-content/uploads/2015/11/00-best-backgrounds-and-wallpaper-apps-for-android.jpg" alt="Card image cap">-->
+        <%= image_tag  item.image_url, class: "card-img-top",  height: "200" %>
+        <div class="card-block">
+          <h4 class="card-title"><%= item.branch.try(:name) %></h4>
+          <p class="card-text">
+            <%= truncate(item.message, length: 200, separator: ' ') %>
+          </p>
+          <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <div class="clearfix"></div>
+</div>
+  
