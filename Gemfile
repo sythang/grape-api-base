@@ -37,7 +37,13 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'rails_admin', '~> 1.2'
 gem 'devise'
-
+gem 'grape', '~> 1.0'
+gem 'grape-entity', '~> 0.6.1'
+gem 'grape-swagger', '~> 0.27.3'
+gem 'grape-swagger-entity'
+gem 'grape-swagger-representable'
+gem 'grape-swagger-rails', '~> 0.3.0'
+gem 'kaminari'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
